@@ -1,0 +1,2 @@
+Ved kjøring får vi Segmentation fault. Dette er fordi pekeren peker på en 0
+, en ugyldig adresse. Når så skal kopieres til pekeren blir den kopiert til en ugyldig adresse, og vi får feil. 

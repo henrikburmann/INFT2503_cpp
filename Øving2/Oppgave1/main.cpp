@@ -1,3 +1,4 @@
+#include <cstring>
 #include <iostream>
 
 using namespace std;
@@ -24,4 +25,5 @@ int main() {
   //Verdien p peker på settes til 7, mens den q peker på økes med 4.
   //Verdien q peker på settes så lik  det p peker på pluss 1, altså 7 + 1.
   //p peker så på adressen som q peker på og de får samme verdi.
+}
 }

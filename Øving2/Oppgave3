@@ -1,0 +1,4 @@
+Når tabellen text opprettes settes det av 5 plasser i minne til 5 elementer.
+Hvis programmet ikke finner en "e" eller brukeren legger inne et ord lenger
+enn 5 bokstaver vil programmet fortsette inn i adresser som tilhører andre
+ting enn tabellen. Dette kan være farlig da man kan overskrive dette.
