@@ -28,6 +28,8 @@ public:
 
     /// Returns true if the given chess piece move is valid
     virtual bool valid_move(int from_x, int from_y, int to_x, int to_y) const = 0;
+
+    virtual std::string position_text() const = 0;
   };
 
   class King : public Piece {
@@ -43,6 +45,13 @@ public:
         return false;
       }
       return true;
+    }
+    std::string position_text() const override {
+      if (color_string() == "white") {
+        return "W-Ki";
+      } else {
+        return "B-Ki";
+      }
     }
 
   public:
@@ -60,6 +69,13 @@ public:
       }
       return false;
     }
+    std::string position_text() const override {
+      if (color_string() == "white") {
+        return "W-Kn";
+      } else {
+        return "B-Kn";
+      }
+    }
 
   public:
     Knight(Color color) : Piece(color) {}
@@ -74,6 +90,22 @@ public:
 
   /// 8x8 squares occupied by 1 or 0 chess pieces
   vector<vector<unique_ptr<Piece>>> squares;
+
+  string print_board() const {
+    string board;
+    for (int x = 7; x > -1; x--) {
+      for (int y = 7; y > -1; y--) {
+        auto &piece = squares[x][y];
+        if (piece) {
+          board += " " + piece->position_text() + " ";
+        } else {
+          board += "   0  ";
+        }
+      }
+      board += "\n";
+    }
+    return board;
+  }
 
   /// Move a chess piece if it is a valid move.
   /// Does not test for check or checkmate.
@@ -100,6 +132,9 @@ public:
           }
         }
         piece_to = move(piece_from);
+        cout << "------------------------" << endl;
+        string board = print_board();
+        cout << board << endl;
         return true;
       } else {
         cout << "can not move " << piece_from->type() << " from " << from << " to " << to << endl;
