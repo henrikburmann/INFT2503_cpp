@@ -14,7 +14,6 @@ int main() {
   string word1;
   string word2;
   string word3;
-
   cin >> word1;
   cin >> word2;
   cin >> word3;
@@ -27,16 +26,16 @@ int main() {
   string lengths = length_of_table_contents_and_table_lenght(words);
   cout << lengths << endl;
 
-  //d
+  // d
   string sentence2 = sentence;
   cout << sentence2 << endl;
 
-  //Bytter ut bokstav 10, 11 og 12 med x.
+  // Bytter ut bokstav 10, 11 og 12 med x.
   change_index_9_to_11_with_x(sentence2);
   cout << sentence << endl;
   cout << sentence2 << endl;
 
-  //f
+  // f
   string sentence_start;
   if (sentence.length() > 4) {
     sentence_start = sentence.substr(0, 5);
@@ -53,13 +52,13 @@ int main() {
   cout << "Antall forekomster er: " << count_number_of_phrase_occurences(sentence) << endl;
 };
 
-//b
+// b
 string words_to_sentence(string words[]) {
   string sentence = words[0] + " " + words[1] + " " + words[2] + ".";
   return sentence;
 }
 
-//c - litt vel kronglete muligens
+// c - litt vel kronglete muligens
 string length_of_table_contents_and_table_lenght(string words[]) {
   string lengths;
   lengths.append("Lengde av ord 1: ");
@@ -79,7 +78,7 @@ string length_of_table_contents_and_table_lenght(string words[]) {
   return lengths;
 }
 
-//e
+// e
 void change_index_9_to_11_with_x(string &sentence_) {
   if (sentence_.length() > 12) {
     sentence_[9] = 'x';
@@ -88,7 +87,7 @@ void change_index_9_to_11_with_x(string &sentence_) {
   }
 }
 
-//g
+// g
 bool check_if_string_contains_phrase(string sentence_, string phrase_) {
   if (sentence_.find(phrase_) != string::npos) {
     return true;
@@ -97,7 +96,7 @@ bool check_if_string_contains_phrase(string sentence_, string phrase_) {
   }
 }
 
-//h
+// h
 int count_number_of_phrase_occurences(string sentence) {
   int count = 0;
   for (size_t i = 0; i < sentence.length(); i++) {

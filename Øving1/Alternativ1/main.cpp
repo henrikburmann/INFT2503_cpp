@@ -1,6 +1,6 @@
 #include <iostream>
 
-//Løsing ved bruk av input fra bruker
+// Løsing ved bruk av input fra bruker
 using namespace std;
 int main() {
   const int length = 5;
@@ -13,7 +13,7 @@ int main() {
     cout << "Skriv inn tall nummer " << i + 1 << " ";
     double temprature = 0;
     cin >> temprature;
-    12 cout << endl;
+    cout << endl;
     if (temprature < 10) {
       low++;
     } else if (temprature >= 10 && temprature <= 20) {
