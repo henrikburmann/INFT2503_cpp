@@ -11,7 +11,7 @@ int main() {
   cout << "Oppgave A: " << endl;
   cout << "Adresse i: " << &i << ". Verdi i: " << i << endl;
   cout << "Adresse j: " << &j << ". Verdi j: " << j << endl;
-  cout << "Adresse p: " << &p << ". Verdi p: " << p << endl;
+  cout << "Adresse p: " << *p << ". Verdi p: " << p << endl;
   cout << "Adresse q: " << &q << ". Verdi q: " << q << endl;
 
   // p og q peker på adressene til henholdsvis i og j. Derfor vil verdien av p og q være adressene til i og j
